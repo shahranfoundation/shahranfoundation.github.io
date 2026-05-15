@@ -1,146 +1,1023 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahran Foundation</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome Icons ke liye -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shahran Foundation</title>
+
+<meta name="description" content="Shahran Foundation - Serving Humanity with Care & Commitment">
+<meta name="keywords" content="NGO, Shahran Foundation, Healthcare, Education, Social Welfare">
+<meta name="theme-color" content="#0b2a4a">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f7fb;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:14px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(11,42,74,0.92);
+backdrop-filter:blur(10px);
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:50px;
+width:auto;
+border-radius:8px;
+}
+
+.logo span{
+color:#fff;
+font-size:22px;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:22px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#fff;
+font-size:15px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00d4ff;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+color:#fff;
+position:relative;
+}
+
+.hero-content{
+max-width:850px;
+animation:fadeUp 1s ease;
+}
+
+.hero h1{
+font-size:58px;
+line-height:1.2;
+margin-bottom:20px;
+font-weight:700;
+}
+
+.hero p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+color:#eee;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 32px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+display:inline-block;
+}
+
+.btn-primary{
+background:#00b894;
+color:#fff;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+background:#009d7d;
+}
+
+.btn-secondary{
+background:#fff;
+color:#0b2a4a;
+}
+
+.btn-secondary:hover{
+transform:translateY(-3px);
+}
+
+/* FLOATING STATS */
+
+.stats{
+margin-top:-70px;
+position:relative;
+z-index:10;
+padding:0 7%;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat-card{
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-8px);
+}
+
+.stat-card h2{
+font-size:38px;
+color:#0b2a4a;
+margin-bottom:10px;
+}
+
+.stat-card p{
+font-size:15px;
+color:#555;
+}
+
+/* GENERAL */
+
+section{
+padding:100px 7%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:55px;
+}
+
+.section-title h2{
+font-size:42px;
+color:#0b2a4a;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#666;
+font-size:16px;
+}
+
+/* ABOUT */
+
+.about-content{
+max-width:1000px;
+margin:auto;
+text-align:center;
+line-height:1.9;
+font-size:17px;
+color:#444;
+}
+
+/* TEAM */
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.team-card{
+background:#fff;
+padding:30px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
+transition:0.3s;
+}
+
+.team-card:hover{
+transform:translateY(-8px);
+}
+
+.team-card img{
+width:120px;
+height:120px;
+object-fit:cover;
+border-radius:50%;
+margin-bottom:20px;
+border:5px solid #f1f1f1;
+}
+
+.team-card h3{
+margin-bottom:10px;
+color:#0b2a4a;
+}
+
+.team-card p{
+color:#666;
+font-size:14px;
+line-height:1.7;
+}
+
+/* ACTIVITIES */
+
+.activities-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.activity-card{
+background:#fff;
+padding:28px;
+border-radius:22px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+transition:0.3s;
+}
+
+.activity-card:hover{
+transform:translateY(-8px);
+}
+
+.activity-card i{
+font-size:35px;
+color:#00b894;
+margin-bottom:18px;
+}
+
+/* WORK */
+
+.work-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.work-card{
+background:#fff;
+padding:30px;
+border-radius:24px;
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
+transition:0.3s;
+}
+
+.work-card:hover{
+transform:translateY(-8px);
+}
+
+.work-card i{
+font-size:40px;
+color:#0b2a4a;
+margin-bottom:18px;
+}
+
+.work-card h3{
+margin-bottom:12px;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:20px;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.gallery-grid img:hover{
+transform:scale(1.03);
+}
+
+/* DONATION */
+
+.donation-box{
+max-width:850px;
+margin:auto;
+background:#fff;
+padding:50px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.upi-btn{
+margin-top:25px;
+display:inline-block;
+padding:16px 40px;
+background:#00b894;
+color:#fff;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.upi-btn:hover{
+background:#009b78;
+transform:translateY(-3px);
+}
+
+.bank-details{
+margin-top:30px;
+line-height:2;
+font-size:16px;
+color:#444;
+}
+
+.qr{
+margin-top:25px;
+}
+
+.qr img{
+width:150px;
+height:150px;
+border-radius:12px;
+}
+
+/* JOIN */
+
+.join-box{
+background:linear-gradient(135deg,#0b2a4a,#123f6d);
+padding:70px 30px;
+border-radius:28px;
+text-align:center;
+color:#fff;
+}
+
+.join-box h2{
+font-size:42px;
+margin-bottom:18px;
+}
+
+.join-box p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+margin-bottom:30px;
+color:#ddd;
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.contact-card{
+background:#fff;
+padding:30px;
+border-radius:24px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+.contact-card i{
+font-size:38px;
+color:#00b894;
+margin-bottom:18px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0b2a4a;
+color:#fff;
+padding:70px 7% 30px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:35px;
+margin-bottom:40px;
+}
+
+.footer-box h3{
+margin-bottom:18px;
+}
+
+.footer-box p,
+.footer-box a{
+color:#ddd;
+font-size:14px;
+line-height:1.9;
+text-decoration:none;
+display:block;
+}
+
+.socials{
+display:flex;
+gap:14px;
+margin-top:15px;
+}
+
+.socials a{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#ffffff15;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+transition:0.3s;
+}
+
+.socials a:hover{
+background:#00b894;
+}
+
+.copyright{
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.1);
+padding-top:20px;
+font-size:14px;
+color:#ccc;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:22px;
+right:22px;
+width:58px;
+height:58px;
+background:#25D366;
+color:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+z-index:1000;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:2000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:85%;
+border-radius:12px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav{
+padding:14px 5%;
+}
+
+nav ul{
+display:none;
+}
+
+section{
+padding:80px 5%;
+}
+
+.section-title h2{
+font-size:34px;
+}
+
+.join-box h2{
+font-size:32px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- Header / Navigation -->
-    <header>
-        <div class="container navbar">
-            <div class="logo">
-                <h2>Shahran <span>Foundation</span></h2>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Our Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#donate" class="btn-donate nav-btn">Donate Now</a>
-        </div>
-    </header>
+<!-- NAV -->
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Empowering Communities for a Better Tomorrow</h1>
-            <p>Dedicated to fostering growth in Health, Education, and Environmental Sustainability.</p>
-            <div class="hero-buttons">
-                <a href="#about" class="btn-main">Learn More</a>
-                <a href="#donate" class="btn-sub">Support Us</a>
-            </div>
-        </div>
-    </section>
+<nav>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Us</h2>
-                <p>A step towards positive change and social welfare.</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Shahran Foundation aims to uplift underserved communities by providing resources, quality education guidance, health awareness, and promoting eco-friendly sustainable solutions.</p>
-                    <p>We believe that collective efforts can transform society and build a resilient future for everyone.</p>
-                </div>
-                <div class="about-features">
-                    <div class="feature-card">
-                        <i class="fa-solid fa-hand-holding-heart"></i>
-                        <h4>Transparency</h4>
-                        <p>Every contribution is direct and completely traceable.</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fa-solid fa-users"></i>
-                        <h4>Community First</h4>
-                        <p>Driven by local needs and sustainable impact.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="logo">
+<img src="logo.jpeg" alt="Shahran Foundation Logo">
+<span>Shahran Foundation</span>
+</div>
 
-    <!-- Services / Our Work Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Core Focus</h2>
-                <p>The pillars of our foundation's initiatives.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fa-solid fa-heart-pulse"></i>
-                    <h3>Healthcare</h3>
-                    <p>Organizing awareness programs, diagnostic setups, and medical guidance for those in need.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <h3>Education</h3>
-                    <p>Empowering youth through skill development, career counseling, and academic support.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-seedling"></i>
-                    <h3>Environment</h3>
-                    <p>Promoting renewable energy (like biogas) and sustainable green practices in communities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#work">Our Work</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#donation">Donate</a></li>
+<li><a href="#join">Join Us</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-    <!-- Donation Section -->
-    <section id="donate" class="donate-section">
-        <div class="container">
-            <div class="donate-box">
-                <h2>Support Our Cause</h2>
-                <p>Your contribution directly funds healthcare, education, and green initiatives.</p>
-                
-                <!-- UPI Intent Link Button -->
-                <div class="upi-payment">
-                    <!-- Aap apna actual UPI ID aur naam yahan replace kar sakte hain -->
-                    <a href="upi://pay?pa=yourupi@bank&pn=Shahran%20Foundation&cu=INR" class="btn-upi">
-                        <i class="fa-solid fa-qrcode"></i> Pay via UPI
-                    </a>
-                    <p class="upi-note">*Works on Mobile with UPI Apps like GPay, PhonePe, Paytm.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+</nav>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch for collaborations, volunteering, or queries.</p>
-            </div>
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Budhana, Muzaffarnagar, Uttar Pradesh</p>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>info@shahranfoundation.org</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Shahran Foundation. All Rights Reserved.</p>
-        </div>
-    </footer>
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Serving Humanity with Care & Commitment</h1>
+
+<p>
+Shahran Foundation is dedicated to healthcare, education, social welfare, environmental protection, and spiritual upliftment — building a compassionate society with dignity and equality for all.
+</p>
+
+<div class="hero-buttons">
+<a href="#donation" class="btn btn-primary">Donate Now</a>
+<a href="#join" class="btn btn-secondary">Join Us</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2>50+</h2>
+<p>Health Camps</p>
+</div>
+
+<div class="stat-card">
+<h2>100+</h2>
+<p>People Assisted</p>
+</div>
+
+<div class="stat-card">
+<h2>100+</h2>
+<p>Trees Planted</p>
+</div>
+
+<div class="stat-card">
+<h2>24/7</h2>
+<p>Community Support</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+<h2>About Shahran Foundation</h2>
+<p>Serving humanity with dignity, equality, and compassion.</p>
+</div>
+
+<div class="about-content">
+
+<p>
+Shahran Foundation is a Public Charitable Trust registered in Hazur Nagar, Muzaffarnagar, Uttar Pradesh. Established on 20th May 2026, the foundation is dedicated to healthcare, education, social welfare, environmental protection, and spiritual upliftment.
+</p>
+
+<br>
+
+<p>
+The Trust operates without discrimination based on caste, creed, race, sex, religion, or place of birth. Every initiative and service is accessible equally to all members of society.
+</p>
+
+</div>
+
+</section>
+
+<!-- TEAM -->
+
+<section id="team">
+
+<div class="section-title">
+<h2>Our Team</h2>
+<p>Dedicated individuals working together for humanity.</p>
+</div>
+
+<div class="team-grid">
+
+<div class="team-card">
+<img src="founder.jpeg" alt="Founder">
+<h3>Mohd Suheb Tyagi</h3>
+<p>Founder & Settlor</p>
+</div>
+
+<div class="team-card">
+<img src="co-trustee.jpeg" alt="Co Trustee">
+<h3>Md. Shahalam</h3>
+<p>Co-Trustee</p>
+</div>
+
+<div class="team-card">
+<img src="volunteer-team.jpeg" alt="Volunteer Team">
+<h3>Volunteer Team</h3>
+<p>Young individuals working in health camps, education drives, and social welfare programs.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ACTIVITIES -->
+
+<section>
+
+<div class="section-title">
+<h2>Recent Activities</h2>
+<p>Community initiatives and humanitarian activities.</p>
+</div>
+
+<div class="activities-grid">
+
+<div class="activity-card">
+<i class="fa-solid fa-stethoscope"></i>
+<h3>Health Checkup Camps</h3>
+<p>Free health awareness and medical support programs in rural villages.</p>
+</div>
+
+<div class="activity-card">
+<i class="fa-solid fa-book-open"></i>
+<h3>Education Drives</h3>
+<p>Awareness campaigns encouraging school enrollment and education access.</p>
+</div>
+
+<div class="activity-card">
+<i class="fa-solid fa-bowl-food"></i>
+<h3>Food Distribution</h3>
+<p>Distribution of food and essentials for poor and needy families.</p>
+</div>
+
+<div class="activity-card">
+<i class="fa-solid fa-tree"></i>
+<h3>Tree Plantation</h3>
+<p>Environmental campaigns and plantation drives with volunteers.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- OUR WORK -->
+
+<section id="work">
+
+<div class="section-title">
+<h2>Our Work</h2>
+<p>Focused on humanity, empowerment, and sustainable development.</p>
+</div>
+
+<div class="work-grid">
+
+<div class="work-card">
+<i class="fa-solid fa-heart-pulse"></i>
+<h3>Health Services</h3>
+<p>Medical camps, medicine distribution, and rural health awareness programs.</p>
+</div>
+
+<div class="work-card">
+<i class="fa-solid fa-graduation-cap"></i>
+<h3>Education & Training</h3>
+<p>Scholarships, books, coaching support, and vocational opportunities.</p>
+</div>
+
+<div class="work-card">
+<i class="fa-solid fa-hand-holding-heart"></i>
+<h3>Social Welfare</h3>
+<p>Food, clothes, emergency aid, and support for vulnerable communities.</p>
+</div>
+
+<div class="work-card">
+<i class="fa-solid fa-leaf"></i>
+<h3>Environment</h3>
+<p>Tree plantation, water conservation, and public welfare initiatives.</p>
+</div>
+
+<div class="work-card">
+<i class="fa-solid fa-dove"></i>
+<h3>Spiritual Upliftment</h3>
+<p>Promoting peace, compassion, meditation, yoga, and universal values.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="section-title">
+<h2>Gallery</h2>
+<p>Moments of service, support, and community impact.</p>
+</div>
+
+<div class="gallery-grid">
+
+<img loading="lazy" src="https://images.unsplash.com/photo-1593113598332-cd59a93f7d0d?q=80&w=900&auto=format&fit=crop" alt="Health Camp">
+
+<img loading="lazy" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=900&auto=format&fit=crop" alt="Education Drive">
+
+<img loading="lazy" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=900&auto=format&fit=crop" alt="Food Distribution">
+
+<img loading="lazy" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=900&auto=format&fit=crop" alt="Tree Plantation">
+
+</div>
+
+</section>
+
+<!-- DONATION -->
+
+<section id="donation">
+
+<div class="section-title">
+<h2>Support Our Mission</h2>
+<p>Your contribution helps us serve humanity with compassion and care.</p>
+</div>
+
+<div class="donation-box">
+
+<h3>Donate via UPI</h3>
+
+<a class="upi-btn"
+href="upi://pay?pa=9837983062@ptsbi&pn=Shahran%20Foundation&cu=INR"
+onclick="showDonationAlert()">
+Donate Now
+</a>
+
+<div class="bank-details">
+
+<p><strong>UPI ID:</strong> 9837983062@ptsbi</p>
+<p><strong>Bank:</strong> SBI (Shahran Foundation Trust Account)</p>
+<p><strong>Account No:</strong> 31896211455</p>
+<p><strong>IFSC:</strong> SBIN0003280</p>
+
+</div>
+
+<div class="qr">
+<img src="qr-code.jpeg" alt="Scan to donate via UPI">
+</div>
+
+</div>
+
+</section>
+
+<!-- JOIN -->
+
+<section id="join">
+
+<div class="join-box">
+
+<h2>Be the Change – Join Us & Serve Humanity</h2>
+
+<p>
+Join Shahran Foundation as a volunteer and help us serve society through health camps, education drives, environmental campaigns, social welfare programs, and humanitarian initiatives.
+</p>
+
+<a class="btn btn-primary"
+href="https://forms.gle/GmSVMxQc5uGq6vbA8"
+target="_blank">
+Apply to Join
+</a>
+
+<br><br>
+
+<p>
+Applications will be reviewed by the Shahran Foundation team and selected applicants will be contacted accordingly.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>Connect with us and become part of positive change.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<i class="fa-solid fa-phone"></i>
+<h3>Phone</h3>
+<p>+91-8433412626</p>
+</div>
+
+<div class="contact-card">
+<i class="fa-solid fa-envelope"></i>
+<h3>Email</h3>
+<p>shahranfoundation@gmail.com</p>
+</div>
+
+<div class="contact-card">
+<i class="fa-solid fa-location-dot"></i>
+<h3>Address</h3>
+<p>
+Village Hazur Nagar,<br>
+P.o. Mubarakpur,<br>
+Budhana, Muzaffarnagar,<br>
+Uttar Pradesh - 251318
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div class="footer-box">
+<h3>Shahran Foundation</h3>
+<p>
+Dedicated to healthcare, education, social welfare, environmental protection, and humanitarian service.
+</p>
+</div>
+
+<div class="footer-box">
+<h3>Quick Links</h3>
+<a href="#about">About</a>
+<a href="#work">Our Work</a>
+<a href="#gallery">Gallery</a>
+<a href="#donation">Donate</a>
+<a href="#join">Join Us</a>
+</div>
+
+<div class="footer-box">
+<h3>Contact</h3>
+<p>+91-8433412626</p>
+<p>shahranfoundation@gmail.com</p>
+<p>Muzaffarnagar, Uttar Pradesh</p>
+</div>
+
+<div class="footer-box">
+<h3>Follow Us</h3>
+
+<div class="socials">
+
+<a href="https://www.instagram.com/shahran_foundation?igsh=M3k3ZTRuYW85ODFx" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61578181267657" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://youtube.com/@shahranfoundation?si=VP87rK_40gVQrp5u" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Shahran Foundation. All Rights Reserved.
+</div>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/918433412626"
+class="whatsapp"
+target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+<img id="lightbox-img" src="" alt="Gallery Image">
+</div>
+
+<script>
+
+function showDonationAlert(){
+setTimeout(()=>{
+alert("Thank you for your donation!");
+},500);
+}
+
+const galleryImages=document.querySelectorAll('.gallery-grid img');
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightbox-img');
+
+galleryImages.forEach(img=>{
+img.addEventListener('click',()=>{
+lightbox.style.display='flex';
+lightboxImg.src=img.src;
+});
+});
+
+lightbox.addEventListener('click',()=>{
+lightbox.style.display='none';
+});
+
+</script>
 
 </body>
 </html>
