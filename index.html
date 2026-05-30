@@ -1,1024 +1,711 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Shahran Foundation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Shahran Foundation | Serving Humanity with Care & Commitment</title>
 <link rel="icon" href="genfavicon-64.png">
-  
-<meta name="description" content="Shahran Foundation - Serving Humanity with Care & Commitment">
-<meta name="keywords" content="NGO, Shahran Foundation, Healthcare, Education, Social Welfare">
+<meta name="description" content="Shahran Foundation - Public Charitable Trust serving healthcare, education, social welfare, environment, and spiritual upliftment without discrimination.">
+<meta name="keywords" content="NGO, Shahran Foundation, Healthcare, Education, Social Welfare, Muzaffarnagar">
 <meta name="theme-color" content="#0b2a4a">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:#f5f7fb;
-color:#222;
-overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:14px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(11,42,74,0.92);
-backdrop-filter:blur(10px);
-z-index:1000;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo img{
-height:50px;
-width:auto;
-border-radius:8px;
-}
-
-.logo span{
-color:#fff;
-font-size:22px;
-font-weight:700;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:22px;
-}
-
-nav ul li a{
-text-decoration:none;
-color:#fff;
-font-size:15px;
-font-weight:500;
-transition:0.3s;
-}
-
-nav ul li a:hover{
-color:#00d4ff;
-}
-
-/* HERO */
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:0 20px;
-color:#fff;
-position:relative;
-}
-
-.hero-content{
-max-width:850px;
-animation:fadeUp 1s ease;
-}
-
-.hero h1{
-font-size:58px;
-line-height:1.2;
-margin-bottom:20px;
-font-weight:700;
-}
-
-.hero p{
-font-size:18px;
-line-height:1.8;
-margin-bottom:30px;
-color:#eee;
-}
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:14px 32px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-display:inline-block;
-}
-
-.btn-primary{
-background:#00b894;
-color:#fff;
-}
-
-.btn-primary:hover{
-transform:translateY(-3px);
-background:#009d7d;
-}
-
-.btn-secondary{
-background:#fff;
-color:#0b2a4a;
-}
-
-.btn-secondary:hover{
-transform:translateY(-3px);
-}
-
-/* FLOATING STATS */
-
-.stats{
-margin-top:-70px;
-position:relative;
-z-index:10;
-padding:0 7%;
-}
-
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.stat-card{
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(10px);
-padding:30px;
-border-radius:22px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.stat-card:hover{
-transform:translateY(-8px);
-}
-
-.stat-card h2{
-font-size:38px;
-color:#0b2a4a;
-margin-bottom:10px;
-}
-
-.stat-card p{
-font-size:15px;
-color:#555;
-}
-
-/* GENERAL */
-
-section{
-padding:100px 7%;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:55px;
-}
-
-.section-title h2{
-font-size:42px;
-color:#0b2a4a;
-margin-bottom:10px;
-}
-
-.section-title p{
-color:#666;
-font-size:16px;
-}
-
-/* ABOUT */
-
-.about-content{
-max-width:1000px;
-margin:auto;
-text-align:center;
-line-height:1.9;
-font-size:17px;
-color:#444;
-}
-
-/* TEAM */
-
-.team-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.team-card{
-background:#fff;
-padding:30px;
-border-radius:22px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.07);
-transition:0.3s;
-}
-
-.team-card:hover{
-transform:translateY(-8px);
-}
-
-.team-card img{
-width:120px;
-height:120px;
-object-fit:cover;
-border-radius:50%;
-margin-bottom:20px;
-border:5px solid #f1f1f1;
-}
-
-.team-card h3{
-margin-bottom:10px;
-color:#0b2a4a;
-}
-
-.team-card p{
-color:#666;
-font-size:14px;
-line-height:1.7;
-}
-
-/* ACTIVITIES */
-
-.activities-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.activity-card{
-background:#fff;
-padding:28px;
-border-radius:22px;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
-transition:0.3s;
-}
-
-.activity-card:hover{
-transform:translateY(-8px);
-}
-
-.activity-card i{
-font-size:35px;
-color:#00b894;
-margin-bottom:18px;
-}
-
-/* WORK */
-
-.work-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.work-card{
-background:#fff;
-padding:30px;
-border-radius:24px;
-box-shadow:0 10px 25px rgba(0,0,0,0.07);
-transition:0.3s;
-}
-
-.work-card:hover{
-transform:translateY(-8px);
-}
-
-.work-card i{
-font-size:40px;
-color:#0b2a4a;
-margin-bottom:18px;
-}
-
-.work-card h3{
-margin-bottom:12px;
-}
-
-/* GALLERY */
-
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
-
-.gallery-grid img{
-width:100%;
-height:260px;
-object-fit:cover;
-border-radius:20px;
-cursor:pointer;
-transition:0.4s;
-box-shadow:0 10px 20px rgba(0,0,0,0.08);
-}
-
-.gallery-grid img:hover{
-transform:scale(1.03);
-}
-
-/* DONATION */
-
-.donation-box{
-max-width:850px;
-margin:auto;
-background:#fff;
-padding:50px;
-border-radius:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-text-align:center;
-}
-
-.upi-btn{
-margin-top:25px;
-display:inline-block;
-padding:16px 40px;
-background:#00b894;
-color:#fff;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.upi-btn:hover{
-background:#009b78;
-transform:translateY(-3px);
-}
-
-.bank-details{
-margin-top:30px;
-line-height:2;
-font-size:16px;
-color:#444;
-}
-
-.qr{
-margin-top:25px;
-}
-
-.qr img{
-width:150px;
-height:150px;
-border-radius:12px;
-}
-
-/* JOIN */
-
-.join-box{
-background:linear-gradient(135deg,#0b2a4a,#123f6d);
-padding:70px 30px;
-border-radius:28px;
-text-align:center;
-color:#fff;
-}
-
-.join-box h2{
-font-size:42px;
-margin-bottom:18px;
-}
-
-.join-box p{
-max-width:800px;
-margin:auto;
-line-height:1.8;
-margin-bottom:30px;
-color:#ddd;
-}
-
-/* CONTACT */
-
-.contact-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.contact-card{
-background:#fff;
-padding:30px;
-border-radius:24px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
-}
-
-.contact-card i{
-font-size:38px;
-color:#00b894;
-margin-bottom:18px;
-}
-
-/* FOOTER */
-
-footer{
-background:#0b2a4a;
-color:#fff;
-padding:70px 7% 30px;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:35px;
-margin-bottom:40px;
-}
-
-.footer-box h3{
-margin-bottom:18px;
-}
-
-.footer-box p,
-.footer-box a{
-color:#ddd;
-font-size:14px;
-line-height:1.9;
-text-decoration:none;
-display:block;
-}
-
-.socials{
-display:flex;
-gap:14px;
-margin-top:15px;
-}
-
-.socials a{
-width:42px;
-height:42px;
-border-radius:50%;
-background:#ffffff15;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:18px;
-transition:0.3s;
-}
-
-.socials a:hover{
-background:#00b894;
-}
-
-.copyright{
-text-align:center;
-border-top:1px solid rgba(255,255,255,0.1);
-padding-top:20px;
-font-size:14px;
-color:#ccc;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-bottom:22px;
-right:22px;
-width:58px;
-height:58px;
-background:#25D366;
-color:#fff;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-text-decoration:none;
-z-index:1000;
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* LIGHTBOX */
-
-.lightbox{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:2000;
-}
-
-.lightbox img{
-max-width:90%;
-max-height:85%;
-border-radius:12px;
-}
-
-/* ANIMATION */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:38px;
-}
-
-nav{
-padding:14px 5%;
-}
-
-nav ul{
-display:none;
-}
-
-section{
-padding:80px 5%;
-}
-
-.section-title h2{
-font-size:34px;
-}
-
-.join-box h2{
-font-size:32px;
-}
-
-}
-
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.5;
+  }
+
+  /* container utility */
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* NAVBAR */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(11, 42, 74, 0.96);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    padding: 12px 24px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  }
+
+  .nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .logo img {
+    height: 48px;
+    width: auto;
+    border-radius: 8px;
+  }
+
+  .logo span {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: #00d4ff;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 85vh;
+    background: linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1920&auto=format') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+    margin-top: 70px;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: #f1f5f9;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s;
+  }
+
+  .btn-primary {
+    background: #0f7b3a;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .btn-primary:hover {
+    background: #0b5e2c;
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+  }
+
+  .btn-outline:hover {
+    background: white;
+    color: #0b2a4a;
+  }
+
+  /* STATS SECTION (floating cards) */
+  .stats-section {
+    margin-top: -50px;
+    padding: 0 24px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .stat-card {
+    background: white;
+    padding: 28px 16px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: 0.2s;
+  }
+
+  .stat-card h3 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #0f7b3a;
+    margin-bottom: 8px;
+  }
+
+  .stat-card p {
+    color: #334155;
+    font-weight: 500;
+  }
+
+  /* SECTION STYLES */
+  section {
+    padding: 70px 24px;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0b2a4a;
+    margin-bottom: 12px;
+  }
+
+  .section-header p {
+    color: #475569;
+    font-size: 1rem;
+  }
+
+  /* ABOUT */
+  .about-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #334155;
+  }
+
+  /* TEAM & CARDS GRID */
+  .grid-3, .team-grid, .work-grid, .activities-grid, .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .team-card, .work-card, .activity-card, .contact-card {
+    background: white;
+    border-radius: 24px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    transition: 0.2s;
+  }
+
+  .team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 18px;
+    border: 4px solid #e2e8f0;
+  }
+
+  .team-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+
+  .work-card i, .activity-card i {
+    font-size: 2.4rem;
+    color: #0f7b3a;
+    margin-bottom: 16px;
+  }
+
+  /* GALLERY */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* DONATION BOX */
+  .donation-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px 32px;
+    border-radius: 32px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  }
+
+  .upi-btn {
+    display: inline-block;
+    background: #0f7b3a;
+    color: white;
+    padding: 14px 36px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 20px 0 16px;
+  }
+
+  .bank-details {
+    background: #f1f5f9;
+    padding: 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+
+  .qr img {
+    width: 140px;
+    height: 140px;
+    margin-top: 16px;
+  }
+
+  /* JOIN SECTION */
+  .join-box {
+    background: linear-gradient(135deg, #0b2a4a, #1e4a6e);
+    border-radius: 32px;
+    padding: 50px 30px;
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .join-box h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .join-box p {
+    max-width: 700px;
+    margin: 0 auto 24px;
+    color: #e2e8f0;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #0b2a4a;
+    color: #cbd5e1;
+    padding: 50px 24px 30px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .footer-box h4 {
+    color: white;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+  }
+
+  .footer-box a {
+    color: #cbd5e1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  .social-icons a {
+    background: rgba(255,255,255,0.1);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+  }
+
+  .social-icons a:hover {
+    background: #0f7b3a;
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #2d4a6e;
+    font-size: 0.8rem;
+    margin-top: 30px;
+  }
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #25D366;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 99;
+  }
+
+  /* LIGHTBOX */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 12px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    .section-header h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+    .nav-links {
+      position: fixed;
+      top: 72px;
+      left: -100%;
+      width: 75%;
+      height: calc(100vh - 72px);
+      background: #0b2a4a;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+      gap: 30px;
+      transition: 0.3s;
+      box-shadow: 2px 0 20px rgba(0,0,0,0.2);
+    }
+    .nav-links.active {
+      left: 0;
+    }
+    .hero {
+      padding: 100px 20px 60px;
+      min-height: 70vh;
+    }
+    .stats-section {
+      margin-top: -40px;
+    }
+    .stat-card {
+      padding: 20px 12px;
+    }
+    .stat-card h3 {
+      font-size: 1.8rem;
+    }
+    .gallery-grid img {
+      height: 200px;
+    }
+    .donation-box {
+      padding: 30px 20px;
+    }
+    .join-box {
+      padding: 35px 20px;
+    }
+    .join-box h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .btn {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+  }
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-
 <nav>
-
-<div class="logo">
-<img src="logo.png" alt="Shahran Foundation Logo">
-<span>Shahran Foundation</span>
-</div>
-
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#team">Team</a></li>
-<li><a href="#work">Our Work</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#donation">Donate</a></li>
-<li><a href="#join">Join Us</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
+  <div class="nav-container">
+    <div class="logo" onclick="location.href='#'">
+      <img src="logo.png" alt="Shahran Foundation Logo">
+      <span>Shahran Foundation</span>
+    </div>
+    <div class="menu-icon" id="menuToggle"><i class="fas fa-bars"></i></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#donation">Donate</a></li>
+      <li><a href="#join">Join Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- HERO -->
-
 <section class="hero">
-
-<div class="hero-content">
-
-<h1>Serving Humanity with Care & Commitment</h1>
-
-<p>
-Shahran Foundation is dedicated to healthcare, education, social welfare, environmental protection, and spiritual upliftment — building a compassionate society with dignity and equality for all.
-</p>
-
-<div class="hero-buttons">
-<a href="#donation" class="btn btn-primary">Donate Now</a>
-<a href="#join" class="btn btn-secondary">Join Us</a>
-</div>
-
-</div>
-
+  <div class="hero-content">
+    <h1>Serving Humanity with Care & Commitment</h1>
+    <p>Shahran Foundation (Public Charitable Trust, Est. 2026, Muzaffarnagar) provides free healthcare, quality education, social welfare, environmental action, and spiritual upliftment — without discrimination of caste, creed, or religion.</p>
+    <div class="btn-group">
+      <a href="#donation" class="btn btn-primary">Donate Now</a>
+      <a href="#join" class="btn btn-outline">Join Us</a>
+    </div>
+  </div>
 </section>
 
-<!-- STATS -->
-
-<div class="stats">
-
-<div class="stats-grid">
-
-<div class="stat-card">
-<h2>50+</h2>
-<p>Health Camps</p>
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-card"><h3>50+</h3><p>Health Camps</p></div>
+    <div class="stat-card"><h3>100+</h3><p>Patients Assisted</p></div>
+    <div class="stat-card"><h3>1000+</h3><p>Essential Aid Kits</p></div>
+    <div class="stat-card"><h3>100+</h3><p>Trees Planted</p></div>
+  </div>
 </div>
-
-<div class="stat-card">
-<h2>100+</h2>
-<p>People Assisted</p>
-</div>
-
-<div class="stat-card">
-<h2>100+</h2>
-<p>Trees Planted</p>
-</div>
-
-<div class="stat-card">
-<h2>24/7</h2>
-<p>Community Support</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- ABOUT -->
 
 <section id="about">
-
-<div class="section-title">
-<h2>About Shahran Foundation</h2>
-<p>Serving humanity with dignity, equality, and compassion.</p>
-</div>
-
-<div class="about-content">
-
-<p>
-Shahran Foundation is a Public Charitable Trust registered in Hazur Nagar, Muzaffarnagar, Uttar Pradesh. Established on 20th May 2026, the foundation is dedicated to healthcare, education, social welfare, environmental protection, and spiritual upliftment.
-</p>
-
-<br>
-
-<p>
-The Trust operates without discrimination based on caste, creed, race, sex, religion, or place of birth. Every initiative and service is accessible equally to all members of society.
-</p>
-
-</div>
-
+  <div class="section-header">
+    <h2>About Shahran Foundation</h2>
+    <p>Serving humanity with dignity, equality, and compassion.</p>
+  </div>
+  <div class="about-text">
+    <p>Shahran Foundation is a Public Charitable Trust registered in Hazur Nagar, Muzaffarnagar, Uttar Pradesh. Established on 20th May 2026, the foundation is dedicated to healthcare, education, social welfare, environmental protection, and spiritual upliftment.</p>
+    <br>
+    <p>The Trust operates without discrimination based on caste, creed, race, sex, religion, or place of birth. Every initiative and service is accessible equally to all members of society.</p>
+  </div>
 </section>
-
-<!-- TEAM -->
 
 <section id="team">
-
-<div class="section-title">
-<h2>Our Team</h2>
-<p>Dedicated individuals working together for humanity.</p>
-</div>
-
-<div class="team-grid">
-
-<div class="team-card">
-<img src="founder.jpeg" alt="Founder">
-<h3>Mohd Suheb Tyagi</h3>
-<p>Founder & Settlor</p>
-</div>
-
-<div class="team-card">
-<img src="co-trustee.jpeg" alt="Co Trustee">
-<h3>Md. Shahalam</h3>
-<p>Co-Trustee</p>
-</div>
-
-<div class="team-card">
-<img src="volunteer-team.jpeg" alt="Volunteer Team">
-<h3>Volunteer Team</h3>
-<p>Young individuals working in health camps, education drives, and social welfare programs.</p>
-</div>
-
-</div>
-
+  <div class="section-header">
+    <h2>Our Team</h2>
+    <p>Dedicated individuals working together for humanity.</p>
+  </div>
+  <div class="team-grid">
+    <div class="team-card"><img src="founder.jpeg" alt="Founder"><h3>Mohd Suheb Tyagi</h3><p>Founder & Settlor</p></div>
+    <div class="team-card"><img src="co-trustee.jpeg" alt="Co Trustee"><h3>Md. Shahalam</h3><p>Co-Trustee</p></div>
+    <div class="team-card"><img src="volunteer-team.jpeg" alt="Volunteer Team"><h3>Volunteer Team</h3><p>Young individuals working in health camps, education drives, and social welfare programs.</p></div>
+  </div>
 </section>
-
-<!-- ACTIVITIES -->
 
 <section>
-
-<div class="section-title">
-<h2>Recent Activities</h2>
-<p>Community initiatives and humanitarian activities.</p>
-</div>
-
-<div class="activities-grid">
-
-<div class="activity-card">
-<i class="fa-solid fa-stethoscope"></i>
-<h3>Health Checkup Camps</h3>
-<p>Free health awareness and medical support programs in rural villages.</p>
-</div>
-
-<div class="activity-card">
-<i class="fa-solid fa-book-open"></i>
-<h3>Education Drives</h3>
-<p>Awareness campaigns encouraging school enrollment and education access.</p>
-</div>
-
-<div class="activity-card">
-<i class="fa-solid fa-bowl-food"></i>
-<h3>Food Distribution</h3>
-<p>Distribution of food and essentials for poor and needy families.</p>
-</div>
-
-<div class="activity-card">
-<i class="fa-solid fa-tree"></i>
-<h3>Tree Plantation</h3>
-<p>Environmental campaigns and plantation drives with volunteers.</p>
-</div>
-
-</div>
-
+  <div class="section-header">
+    <h2>Recent Activities</h2>
+    <p>Community initiatives and humanitarian activities.</p>
+  </div>
+  <div class="activities-grid">
+    <div class="activity-card"><i class="fa-solid fa-stethoscope"></i><h3>Health Checkup Camps</h3><p>Free health awareness and medical support in rural villages.</p></div>
+    <div class="activity-card"><i class="fa-solid fa-book-open"></i><h3>Education Drives</h3><p>Awareness campaigns encouraging school enrollment.</p></div>
+    <div class="activity-card"><i class="fa-solid fa-bowl-food"></i><h3>Food Distribution</h3><p>Distribution of food and essentials for needy families.</p></div>
+    <div class="activity-card"><i class="fa-solid fa-tree"></i><h3>Tree Plantation</h3><p>Environmental campaigns with active volunteers.</p></div>
+  </div>
 </section>
-
-<!-- OUR WORK -->
 
 <section id="work">
-
-<div class="section-title">
-<h2>Our Work</h2>
-<p>Focused on humanity, empowerment, and sustainable development.</p>
-</div>
-
-<div class="work-grid">
-
-<div class="work-card">
-<i class="fa-solid fa-heart-pulse"></i>
-<h3>Health Services</h3>
-<p>Medical camps, medicine distribution, and rural health awareness programs.</p>
-</div>
-
-<div class="work-card">
-<i class="fa-solid fa-graduation-cap"></i>
-<h3>Education & Training</h3>
-<p>Scholarships, books, coaching support, and vocational opportunities.</p>
-</div>
-
-<div class="work-card">
-<i class="fa-solid fa-hand-holding-heart"></i>
-<h3>Social Welfare</h3>
-<p>Food, clothes, emergency aid, and support for vulnerable communities.</p>
-</div>
-
-<div class="work-card">
-<i class="fa-solid fa-leaf"></i>
-<h3>Environment</h3>
-<p>Tree plantation, water conservation, and public welfare initiatives.</p>
-</div>
-
-<div class="work-card">
-<i class="fa-solid fa-dove"></i>
-<h3>Spiritual Upliftment</h3>
-<p>Promoting peace, compassion, meditation, yoga, and universal values.</p>
-</div>
-
-</div>
-
+  <div class="section-header">
+    <h2>Our Work</h2>
+    <p>Focused on humanity, empowerment, and sustainable development.</p>
+  </div>
+  <div class="work-grid">
+    <div class="work-card"><i class="fa-solid fa-heart-pulse"></i><h3>Health Services</h3><p>Medical camps, medicine distribution, rural health awareness.</p></div>
+    <div class="work-card"><i class="fa-solid fa-graduation-cap"></i><h3>Education & Training</h3><p>Scholarships, books, coaching, vocational courses.</p></div>
+    <div class="work-card"><i class="fa-solid fa-hand-holding-heart"></i><h3>Social Welfare</h3><p>Food, clothes, emergency aid for orphans, widows, disabled.</p></div>
+    <div class="work-card"><i class="fa-solid fa-leaf"></i><h3>Environment</h3><p>Tree plantation, water conservation, solar lights.</p></div>
+    <div class="work-card"><i class="fa-solid fa-dove"></i><h3>Spiritual Upliftment</h3><p>Meditation, yoga, universal values of compassion.</p></div>
+  </div>
 </section>
-
-<!-- GALLERY -->
 
 <section id="gallery">
-
-<div class="section-title">
-<h2>Gallery</h2>
-<p>Moments of service, support, and community impact.</p>
-</div>
-
-<div class="gallery-grid">
-
-<img loading="lazy" src="https://images.unsplash.com/photo-1593113598332-cd59a93f7d0d?q=80&w=900&auto=format&fit=crop" alt="Health Camp">
-
-<img loading="lazy" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=900&auto=format&fit=crop" alt="Education Drive">
-
-<img loading="lazy" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=900&auto=format&fit=crop" alt="Food Distribution">
-
-<img loading="lazy" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=900&auto=format&fit=crop" alt="Tree Plantation">
-
-</div>
-
+  <div class="section-header">
+    <h2>Gallery</h2>
+    <p>Moments of service, support, and community impact.</p>
+  </div>
+  <div class="gallery-grid">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1593113598332-cd59a93f7d0d?w=600&h=400&fit=crop" alt="Health Camp">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop" alt="Education Drive">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=400&fit=crop" alt="Food Distribution">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop" alt="Tree Plantation">
+  </div>
 </section>
-
-<!-- DONATION -->
 
 <section id="donation">
-
-<div class="section-title">
-<h2>Support Our Mission</h2>
-<p>Your contribution helps us serve humanity with compassion and care.</p>
-</div>
-
-<div class="donation-box">
-
-<h3>Donate via UPI</h3>
-
-<a class="upi-btn"
-href="upi://pay?pa=9837983062@ptsbi&pn=Shahran%20Foundation&cu=INR"
-onclick="showDonationAlert()">
-Donate Now
-</a>
-
-<div class="bank-details">
-
-<p><strong>UPI ID:</strong> 9837983062@ptsbi</p>
-<p><strong>Bank:</strong> SBI (Shahran Foundation Trust Account)</p>
-<p><strong>Account No:</strong> 31896211455</p>
-<p><strong>IFSC:</strong> SBIN0003280</p>
-
-</div>
-
-<div class="qr">
-<img src="qr-code.jpeg" alt="Scan to donate via UPI">
-</div>
-
-</div>
-
+  <div class="section-header">
+    <h2>Support Our Mission</h2>
+    <p>Your contribution helps us serve humanity with compassion and care.</p>
+  </div>
+  <div class="donation-box">
+    <h3>Donate via UPI</h3>
+    <a class="upi-btn" href="upi://pay?pa=9837983062@ptsbi&pn=Shahran%20Foundation&cu=INR" onclick="setTimeout(()=>alert('Thank you for your donation!'), 300);">Donate Now</a>
+    <div class="bank-details">
+      <p><strong>UPI ID:</strong> 9837983062@ptsbi</p>
+      <p><strong>Bank:</strong> SBI (Shahran Foundation Trust Account)</p>
+      <p><strong>Account No:</strong> 31896211455</p>
+      <p><strong>IFSC:</strong> SBIN0003280</p>
+    </div>
+    <div class="qr"><img src="qr-code.jpeg" alt="Scan to donate via UPI"></div>
+  </div>
 </section>
-
-<!-- JOIN -->
 
 <section id="join">
-
-<div class="join-box">
-
-<h2>Be the Change – Join Us & Serve Humanity</h2>
-
-<p>
-Join Shahran Foundation as a volunteer and help us serve society through health camps, education drives, environmental campaigns, social welfare programs, and humanitarian initiatives.
-</p>
-
-<a class="btn btn-primary"
-href="https://forms.gle/GmSVMxQc5uGq6vbA8"
-target="_blank">
-Apply to Join
-</a>
-
-<br><br>
-
-<p>
-Applications will be reviewed by the Shahran Foundation team and selected applicants will be contacted accordingly.
-</p>
-
-</div>
-
+  <div class="join-box">
+    <h2>Be the Change – Join Us & Serve Humanity</h2>
+    <p>Join Shahran Foundation as a volunteer and help us serve society through health camps, education drives, environmental campaigns, social welfare programs, and humanitarian initiatives.</p>
+    <a class="btn btn-primary" href="https://forms.gle/GmSVMxQc5uGq6vbA8" target="_blank">Apply to Join</a>
+    <p style="margin-top: 24px; font-size: 0.85rem;">Applications will be reviewed by the Shahran Foundation team and selected applicants will be contacted accordingly.</p>
+  </div>
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
-
-<div class="section-title">
-<h2>Contact Us</h2>
-<p>Connect with us and become part of positive change.</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-<i class="fa-solid fa-phone"></i>
-<h3>Phone</h3>
-<p>+91-8433412626</p>
-</div>
-
-<div class="contact-card">
-<i class="fa-solid fa-envelope"></i>
-<h3>Email</h3>
-<p>shahranfoundation@gmail.com</p>
-</div>
-
-<div class="contact-card">
-<i class="fa-solid fa-location-dot"></i>
-<h3>Address</h3>
-<p>
-Village Hazur Nagar,<br>
-P.o. Mubarakpur,<br>
-Budhana, Muzaffarnagar,<br>
-Uttar Pradesh - 251318
-</p>
-</div>
-
-</div>
-
+  <div class="section-header">
+    <h2>Contact Us</h2>
+    <p>Connect with us and become part of positive change.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card"><i class="fa-solid fa-phone"></i><h3>Phone</h3><p>+91-8433412626</p></div>
+    <div class="contact-card"><i class="fa-solid fa-envelope"></i><h3>Email</h3><p>shahranfoundation@gmail.com</p></div>
+    <div class="contact-card"><i class="fa-solid fa-location-dot"></i><h3>Address</h3><p>Village Hazur Nagar, P.o. Mubarakpur, Tehsil Budhana, District Muzaffarnagar, UP - 251318</p></div>
+  </div>
+  <div style="text-align: center; margin-top: 40px; font-size: 0.9rem; color: #475569;">
+    <p><strong>Trust Registration:</strong> UP/TR/2026/221 | <strong>12A & 80G:</strong> AACTF1256N / 80G/2026/331<br>
+    <strong>NGO Darpan ID:</strong> UP/2026/0298991 | <strong>MSME ID:</strong> UDYAM-UP-12-0045678</p>
+  </div>
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-
-<div class="footer-grid">
-
-<div class="footer-box">
-<h3>Shahran Foundation</h3>
-<p>
-Dedicated to healthcare, education, social welfare, environmental protection, and humanitarian service.
-</p>
-</div>
-
-<div class="footer-box">
-<h3>Quick Links</h3>
-<a href="#about">About</a>
-<a href="#work">Our Work</a>
-<a href="#gallery">Gallery</a>
-<a href="#donation">Donate</a>
-<a href="#join">Join Us</a>
-</div>
-
-<div class="footer-box">
-<h3>Contact</h3>
-<p>+91-8433412626</p>
-<p>shahranfoundation@gmail.com</p>
-<p>Muzaffarnagar, Uttar Pradesh</p>
-</div>
-
-<div class="footer-box">
-<h3>Follow Us</h3>
-
-<div class="socials">
-
-<a href="https://www.instagram.com/shahran_foundation?igsh=M3k3ZTRuYW85ODFx" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.facebook.com/profile.php?id=61578181267657" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-<a href="https://youtube.com/@shahranfoundation?si=VP87rK_40gVQrp5u" target="_blank">
-<i class="fab fa-youtube"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="copyright">
-© 2026 Shahran Foundation. All Rights Reserved.
-</div>
-
+  <div class="footer-grid">
+    <div class="footer-box"><h4>Shahran Foundation</h4><p>Public Charitable Trust, Hazur Nagar, Muzaffarnagar. Serving all without discrimination.</p></div>
+    <div class="footer-box"><h4>Quick Links</h4><a href="#about">About</a><a href="#work">Our Work</a><a href="#gallery">Gallery</a><a href="#donation">Donate</a><a href="#join">Join Us</a></div>
+    <div class="footer-box"><h4>Contact</h4><p>+91-8433412626</p><p>shahranfoundation@gmail.com</p><p>Muzaffarnagar, UP - 251318</p></div>
+    <div class="footer-box"><h4>Follow Us</h4><div class="social-icons"><a href="https://www.instagram.com/shahran_foundation" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/profile.php?id=61578181267657" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://youtube.com/@shahranfoundation" target="_blank"><i class="fab fa-youtube"></i></a></div></div>
+  </div>
+  <div class="copyright">© 2026 Shahran Foundation. All Rights Reserved. | <a href="#" style="color:#94a3b8;">Privacy Policy</a> | <a href="#" style="color:#94a3b8;">Terms & Conditions</a></div>
 </footer>
 
-<!-- WHATSAPP -->
+<a href="https://wa.me/918433412626" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-<a href="https://wa.me/918433412626"
-class="whatsapp"
-target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- LIGHTBOX -->
-
-<div class="lightbox" id="lightbox">
-<img id="lightbox-img" src="" alt="Gallery Image">
-</div>
+<div class="lightbox" id="lightbox"><img id="lightboxImg" src=""></div>
 
 <script>
+  // mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('active'));
+  });
 
-function showDonationAlert(){
-setTimeout(()=>{
-alert("Thank you for your donation!");
-},500);
-}
-
-const galleryImages=document.querySelectorAll('.gallery-grid img');
-const lightbox=document.getElementById('lightbox');
-const lightboxImg=document.getElementById('lightbox-img');
-
-galleryImages.forEach(img=>{
-img.addEventListener('click',()=>{
-lightbox.style.display='flex';
-lightboxImg.src=img.src;
-});
-});
-
-lightbox.addEventListener('click',()=>{
-lightbox.style.display='none';
-});
-
+  // gallery lightbox
+  const images = document.querySelectorAll('.gallery-grid img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+  lightbox.addEventListener('click', () => lightbox.style.display = 'none');
 </script>
-
 </body>
 </html>
